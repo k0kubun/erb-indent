@@ -12,11 +12,23 @@ A gem that supports [Feature #15538](https://bugs.ruby-lang.org/issues/15538).
 require 'erb/indent'
 
 erb = <<-ERB
-<#-- <% hello %> --#>
-hello
+1
+<%| [2, 3, 4].each do |num| -%>
+  <% unless num == 3 -%>
+    <%= num %>
+  <% end -%>
+<%| end -%>
+5
 ERB
 
-Erb::Indent.new(erb).result #=> "\nhello\n"
+puts Erb::Indent.new(erb, nil, "-").result
+```
+
+```
+1
+2
+4
+5
 ```
 
 ## License

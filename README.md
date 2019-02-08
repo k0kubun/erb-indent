@@ -1,6 +1,6 @@
 # Erb::Indent
 
-A gem that supports [Feature #15538](https://bugs.ruby-lang.org/issues/15538).
+A basic PoC of [Feature #15538](https://bugs.ruby-lang.org/issues/15538).
 
 ## Installation
 
